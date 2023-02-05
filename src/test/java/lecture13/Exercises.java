@@ -85,7 +85,7 @@ public class Exercises {
             logout.click();
             wait.until(ExpectedConditions.visibilityOf(signInElement));
 
-            Boolean isTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), name));
+            Boolean isTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"),name ));
             Assert.assertTrue(isTextDisplayed, "The signIn form is not displayed!");
 
 
