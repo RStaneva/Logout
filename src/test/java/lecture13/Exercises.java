@@ -83,10 +83,9 @@ public class Exercises {
 
                     wait.until(ExpectedConditions.presenceOfElementLocated(locator));
             logout.click();
-            wait.until(ExpectedConditions.visibilityOf(signInElement));
+            wait.until(ExpectedConditions.urlToBe("http://training.skillo-bg.com:4300/users/login"));
 
-            Boolean isTextDisplayed = wait.until(ExpectedConditions.textToBe(By.tagName("h2"), name));
-            Assert.assertTrue(isTextDisplayed, "The signIn form is not displayed!");
+            Assert.assertTrue(signInElement.isDisplayed());
 
 
         }
